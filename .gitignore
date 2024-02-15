@@ -3,7 +3,7 @@
 __pycache__
 
 # Ignore the virtual environment
-.env/
+.env
 
 # Ignore Django generated files
 *.sqlite3
