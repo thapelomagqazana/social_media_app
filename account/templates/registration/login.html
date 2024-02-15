@@ -17,7 +17,10 @@
             {{ form.as_p }}
             {% csrf_token %}
             <input type="hidden" name="next" value="{{ next }}" />
-            <p><input typeof="submit" value="Log-in"></p>
+            <p><input type="submit" value="Log-in" /></p>
         </form>
+        <p>
+            <a href="{% url 'password_reset' %}">Forgotten your password?</a>
+        </p>
     </div>
 {% endblock %}
