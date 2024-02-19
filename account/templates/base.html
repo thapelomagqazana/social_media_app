@@ -2,15 +2,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
-    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <!-- Font Awesome CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <!-- Google Fonts Link -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
 </head>
 <body>
     <div id="header">
-        <span class="logo">
-            Bookmarks
-        </span>
+        <a href="{% url 'landing_page' %}">
+            <span class="logo">
+                Dialogga
+            </span>
+        </a>
+        
         {% if request.user.is_authenticated %}
             <ul class="menu">
                 <li {% if section == "dashboard" %}class="selected"{% endif %}>
@@ -29,7 +38,8 @@
                 Hello {{ request.user.first_name|default:request.user.username }},
                 <a href="{% url 'logout' %}">Logout</a>
             {% else %}
-                <a href="{% url 'login' %}">Login</a>
+                <a href="{% url 'register' %}">Sign Up</a>
+                <a href="{% url 'login' %}">Sign In</a>
             {% endif %}
         </span>
     </div>
@@ -37,5 +47,21 @@
         {% block content %}
         {% endblock %}
     </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <p>&copy; 2024 Dialogga. All rights reserved.</p>
+                </div>
+                <div class="col-6 social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
 </body>
 </html>

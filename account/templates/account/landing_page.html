@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Log-in{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 illustration">
+                <!-- Replace this with your illustration -->
+                <img src="{% static 'img/illustration.png' %}" alt="Illustration">
+            </div>
+            <div class="col-6 content">
+                <p class="xxx-large greetings">Hi there!</p>
+                <p class="x-large">Welcome to Dialogga</p>
+                <p class="large"><span class="word-1">Connect.</span><span class="word-2"> Share.</span><span class="word-3"> Discover.</span></p>
+                <div class="cta-buttons">
+                    <a href="{% url 'register' %}" class="cta-btn">Get Started</a>
+                    <a href="{% url 'login' %}" class="get-started-btn">Sign In</a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- <div class="prefooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 connect">
+                    <p class="large">Connect with Friends</p>
+                    <p>Stay connected with loved ones no matter where they are. Share moments, memories, and experiences effortlessly.</p>
+                </div>
+                <div class="col-4 share">
+                    <p class="large">Share Your Story</p>
+                    <p>Express yourself through photos, videos, and posts. Share your passions, interests, and adventures with a community that cares.</p>
+                </div>
+                <div class="col-4 discover">
+                    <p class="large">Discover New Connections</p>
+                    <p>Explore a diverse range of topics, communities, and cultures. Connect with like-minded individuals and discover new passions along the way.</p>
+                </div>
+            </div>
+        </div>
+    </div> -->
+{% endblock %}
