@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="card">
-        <p class="x-large">Log-in</p>
+        <p class="x-large">Sign-in</p>
         {% if form.errors %}
             <p>
                 Your username and password didn't match.
@@ -12,7 +12,7 @@
             </p>
         {% else %}
             <p>
-                Please, use the following form to log-in.
+                Please, use the following form to sign-in.
                 If you don't have an account <a href="{% url 'register' %}">register here</a>
             </p>
         {% endif %}
