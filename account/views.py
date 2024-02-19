@@ -35,6 +35,12 @@ def user_login(request):
     return render(request, "account/login.html", {"form": form})
 
 
+def landing_page(request):
+    return render(request,
+                  "landing_page.html"
+                  )
+
+
 def register(request):
     if request.method == "POST":
         user_form = UserRegistrationForm(request.POST)
