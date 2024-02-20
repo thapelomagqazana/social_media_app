@@ -462,3 +462,33 @@ ul.messages li a.close {
     text-shadow:none;
 }
 
+.social {
+    margin-bottom: 20px; /* Add space between the link and the form */
+    text-align: center; /* Center the link */
+}
+
+.facebook {
+    list-style-type: none;
+}
+
+.facebook a {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #4267B2; /* Facebook blue color */
+    color: #fff;
+    border-radius: 20pt;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: 700;
+}
+
+.facebook a:hover {
+    background-color: #2a4b7c; /* Darker shade of Facebook blue on hover */
+    color: #fff;
+}
+
+.facebook a i {
+    margin-right: 8px; /* Spacing between icon and text */
+}
+
+
