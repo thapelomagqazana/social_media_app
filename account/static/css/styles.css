@@ -73,17 +73,19 @@ body {
 }
 
 #header ul.menu li.selected a, #header ul.menu li.selected a:hover {
-    color:#1b6d32;
+    color:var(--shade-5);
     font-weight:bold;
+    text-decoration: underline;
 }
 
 
 
 #header a {
     color:var(--gray-1);
+    text-decoration: none;
 }
 #header a:hover {
-    color:#fff;
+    color:var(--tint-4);
 }
 
 #header .user {
@@ -330,7 +332,7 @@ footer .social-icons a:last-child {
     border-radius: 10px;
     box-shadow: 0px 7px 20px rgba(230, 104, 47, 0.6); 
     padding: 24px;
-    max-width: 400px; /* Adjust max-width as needed */
+    max-width: 400px;
     margin: 0 auto; /* Center horizontally */
     margin-top: 10px;
     margin-bottom: 10px;
@@ -363,7 +365,7 @@ footer .social-icons a:last-child {
 .card form input[type="password"] {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
+    border: 1px solid var(--gray-3);
     border-radius: 5px;
     font-size: 16px;
 }
@@ -389,6 +391,7 @@ footer .social-icons a:last-child {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0px 7px 20px rgba(230, 104, 47, 0.6);
 }
 
 .card form input[type="submit"]:hover {
