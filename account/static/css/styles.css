@@ -467,28 +467,48 @@ ul.messages li a.close {
     text-align: center; /* Center the link */
 }
 
-.facebook {
+.social a {
+    width: 80%;
+}
+
+.facebook,
+.google {
     list-style-type: none;
 }
 
-.facebook a {
+.facebook a,
+.google a {
     display: inline-block;
     padding: 12px 20px;
-    background-color: #4267B2; /* Facebook blue color */
-    color: #fff;
     border-radius: 20pt;
     text-decoration: none;
     transition: background-color 0.3s ease;
+    margin-bottom: 10px; /* Add space between buttons vertically */
     font-weight: 700;
+}
+
+.facebook a {
+    background-color: #4267B2; /* Facebook blue color */
+    color: #fff;
+}
+
+.google a {
+    background-color: #DB4437; /* Google red color */
+    color: #fff;
 }
 
 .facebook a:hover {
     background-color: #2a4b7c; /* Darker shade of Facebook blue on hover */
-    color: #fff;
+    color: var(--gray-1);
 }
 
-.facebook a i {
+.google a:hover {
+    background-color: #C13506; /* Darker shade of Google red on hover */
+    color: var(--gray-1);
+}
+
+.facebook a i,
+.google a i {
     margin-right: 8px; /* Spacing between icon and text */
 }
-
 
