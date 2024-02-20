@@ -338,31 +338,51 @@ footer .social-icons a:last-child {
     margin-bottom: 10px;
 }
 
-.card a {
+.edit-card {
+    background-color: var(--gray-1);
+    border-radius: 10px;
+    box-shadow: 0px 7px 20px rgba(230, 104, 47, 0.6); 
+    padding: 24px;
+    max-width: 550px;
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+
+.card a,
+.edit-card a {
     color: var(--main-color);
 }
 
-.card a:hover {
+.card a:hover,
+.edit-card a:hover {
     color: var(--shade-5);
 }
 
 /* Form group styles */
-.card form {
+.card form,
+.edit-card form {
     margin-bottom: 24px;
 }
 
 /* Label styles */
-.card form label {
+.card form label,
+.edit-card form label {
     display: block;
     margin-bottom: 8px;
-    color: #555;
     font-weight: bold;
 }
 
 /* Text field styles */
+.edit-card form input[type="text"],
+.edit-card form input[type="email"],
+.edit-card form input[type="password"],
+.edit-card form input[type="file"],
 .card form input[type="text"],
 .card form input[type="email"],
-.card form input[type="password"] {
+.card form input[type="password"],
+.card form input[type="file"] {
     width: 100%;
     padding: 12px;
     border: 1px solid var(--gray-3);
@@ -371,6 +391,9 @@ footer .social-icons a:last-child {
 }
 
 /* Placeholder styles */
+.edit-card form input[type="text"]::placeholder,
+.edit-card form input[type="email"]::placeholder,
+.edit-card form input[type="password"]::placeholder,
 .card form input[type="text"]::placeholder,
 .card form input[type="email"]::placeholder,
 .card form input[type="password"]::placeholder  {
@@ -379,7 +402,8 @@ footer .social-icons a:last-child {
 
 
 
-.card form input[type="submit"] {
+.card form input[type="submit"],
+.edit-card form input[type="submit"] {
     background-color: var(--main-color);
     color: var(--gray-1);
     margin-bottom: 10px;
@@ -394,8 +418,47 @@ footer .social-icons a:last-child {
     box-shadow: 0px 7px 20px rgba(230, 104, 47, 0.6);
 }
 
-.card form input[type="submit"]:hover {
+.card form input[type="submit"]:hover,
+.edit-card form input[type="submit"]:hover {
     background-color: var(--shade-5);
     color: var(--gray-1);
+}
+
+/* messages */
+ul.messages {
+    margin:10px 100px;
+    padding:0;
+    list-style-type:
+    none;
+}
+ul.messages li.success,
+ul.messages li.warning,
+ul.messages li.error,
+ul.messages li.info {
+    margin:0;
+    padding:14px 20px;
+    list-style:none;
+    color:#fff;
+}
+
+ul.messages li.success { background:#81ce81; }
+ul.messages li.success a { color:#0ac33e; }
+
+ul.messages li.error { background:#a30029; color:#e9828e; }
+ul.messages li.error a { color:#e9828e; }
+
+ul.messages li.info { background:#faffae; color:#696b4e; }
+ul.messages li.info a { color:#1586de; }
+
+ul.messages li.warning { background:#de9404; }
+ul.messages li.warning a { color:#f49000; }
+
+ul.messages li a.close {
+    margin:0;
+    float:right;
+    opacity:1;
+    border:0;
+    box-shadow:none;
+    text-shadow:none;
 }
 
