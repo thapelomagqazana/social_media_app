@@ -10,32 +10,87 @@
         </div>
         <div class="image-detail-container">
             <div class="image">
-                <img src="{{ image.image.url }}" class="image-detail">
+                {% load thumbnail %}
+                <a href="{{ image.image.url }}" class="image-link">
+                    <img src="{% thumbnail image.image 300x0 %}" class="image-detail">
+                </a>
             </div>
-            <div class="image-info">
-                <div class="likes">
-                    {% with total_likes=image.users_like.count %}
-                        <span class="count">
-                            {{ total_likes }} like{{ total_likes|pluralize }}
-                        </span>
-                    {% endwith %}
-                </div>
-                <div class="description">
-                    {{ image.description|linebreaks }}
-                </div>
-                <div class="liked-users">
-                    {% for user in image.users_like.all %}
-                        <div class="user">
-                            {% if user.profile.photo %}
-                                <img src="{{ user.profile.photo.url }}" class="user-photo">
+            {% with total_likes=image.users_like.count users_like=image.users_like.all %}
+                <div class="image-info">
+                    <div>
+                        <div class="likes">
+                            <span class="count"> 
+                                <span class="total">{{ total_likes }}</span> like{{ total_likes|pluralize }}
+                            </span>
+                            <a href="#" data-id="{{ image.id }}" data-action="{% if request.user in users_like %}un{% endif %}like"
+                            class="like button">
+                            {% if request.user not in users_like %}
+                                Like
+                            {% else %}
+                                Unlike
                             {% endif %}
-                            <p>{{ user.first_name }}</p>
+                            </a>
                         </div>
-                    {% empty %}
-                        <p>Nobody likes this image yet.</p>
-                    {% endfor %}
+                        <div class="description">
+                            {{ image.description|linebreaks }}
+                        </div>
+                    </div>
+                    <div class="liked-users">
+                        {% for user in users_like %}
+                            <div class="user">
+                                {% if user.profile.photo %}
+                                    <img src="{{ user.profile.photo.url }}" class="user-photo">
+                                {% endif %}
+                                <p>{{ user.first_name }}</p>
+                            </div>
+                        {% empty %}
+                            <p>Nobody likes this image yet.</p>
+                        {% endfor %}
+                    </div>
                 </div>
-            </div>
+            {% endwith %}
         </div>
     </div>
+{% endblock %}
+
+{% block domready %}
+    const url = '{% url "images:like" %}'
+    var options = {
+        method: "POST",
+        headers: {"X-CSRFToken": csrftoken},
+        mode: "same-origin"
+    }
+
+    document.querySelector("a.like")
+            .addEventListener("click", function(e){
+                e.preventDefault();
+                var likeButton = this;
+
+                // add request body
+                var formData = new FormData();
+                formData.append("id", likeButton.dataset.id);
+                formData.append("action", likeButton.dataset.action);
+                options["body"] = formData;
+
+                // send HTTP request
+                fetch(url, options)
+                .then(response => response.json())
+                .then(data => {
+                    if (data["status"] === "ok")
+                    {
+                        var previousAction = likeButton.dataset.action;
+
+                        // toggle button text and data-action
+                        var action = previousAction === "like" ? "unlike" : "like";
+                        likeButton.dataset.action = action;
+                        likeButton.innerHTML = action;
+
+                        // update like count
+                        var likeCount = document.querySelector("span.count .total");
+                        console.log(likeCount);
+                        var totalLikes = parseInt(likeCount.innerHTML);
+                        likeCount.innerHTML = previousAction === "like" ? totalLikes + 1 : totalLikes - 1;
+                    }
+                })
+            });
 {% endblock %}

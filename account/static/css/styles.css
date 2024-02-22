@@ -163,10 +163,7 @@ nav ul li a {
     flex: 1; /* Take up remaining space */
 }
 
-h1 {
-    font-size: 36px;
-    margin-bottom: 32px;
-}
+
 
 p {
     margin-bottom: 48px;
@@ -241,7 +238,8 @@ p {
 }
 
 .cta-btn,
-.container-2 a{
+.container-2 .link,
+a.like{
     background-color: var(--main-color);
     color: var(--gray-1);
     transition: background-color 0.3s ease;
@@ -255,7 +253,8 @@ p {
     transition: background-color 0.3s ease;
 }
 
-.container-2 a {
+.container-2 .link,
+a.like {
     text-decoration: none;
     padding: 10px;
     font-weight: 600;
@@ -277,10 +276,15 @@ p {
 .cta-btn:hover,
 .get-started-btn:hover,
 #header .user a:hover,
-.container-2 a:hover {
+.container-2 .link:hover,
+a.like:hover {
     background-color: var(--shade-5);
     color: var(--gray-1);
     border: none
+}
+
+.image-link img:hover {
+    border: 2px solid var(--main-color);
 }
 
 
@@ -540,8 +544,8 @@ ul.messages li a.close {
 }
 
 .title h1{
-    font-size: 24px;
-    margin-bottom: 20px;
+    font-size: 36px;
+    margin-bottom: 32px;
 }
 
 .title hr {
@@ -571,7 +575,7 @@ ul.messages li a.close {
     height: auto;
 }
 
-.dashboard-content {
+.content-1 {
     padding: 20px;
 }
 
@@ -607,9 +611,10 @@ ul.messages li a.close {
 
 .count {
     padding: 5px;
-    font-weight: bold;
-    border: 3px solid var(--gray-3);
+    font-weight: 600;
+    border: 1px solid var(--gray-3);
     border-radius: 5pt;
+    margin-right: 20px;
 }
 
 

@@ -8,13 +8,13 @@
             <h1>Dashboard</h1>
             <hr> <!-- Horizontal line -->
         </div>
-        <div class="dashboard-content">
+        <div class="content-1">
             {% with total_images_created=request.user.images_created.count %}
                 <p>Welcome to your dashboard. You have bookmarked {{ total_images_created }} image{{ total_images_created|pluralize }}.</p>
             {% endwith %}
-            <p>Drag the following button to your bookmarks toolbar to bookmark images from other websites → <a href="javascript:{% include "bookmarklet_launcher.js" %}" class="button">Bookmark it</a></p>
+            <p>Drag the following button to your bookmarks toolbar to bookmark images from other websites → <a href="javascript:{% include "bookmarklet_launcher.js" %}" class="link">Bookmark it</a></p>
             <p>
-                Welcome to your dashboard. You can <a href="{% url 'edit' %}">edit your profile</a> or <a href="{% url 'password_change' %}">change your password</a>
+                Welcome to your dashboard. You can <a href="{% url 'edit' %}" class="link">edit your profile</a> or <a href="{% url 'password_change' %}" class="link">change your password</a>
             </p>
         </div>
         
