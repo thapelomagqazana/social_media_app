@@ -618,6 +618,29 @@ ul.messages li a.close {
 }
 
 
+#image-list { 
+    overflow:hidden;
+    padding: 20px;
+}
+#image-list .image {
+    float:left;
+    width:220px;
+    height:300px;
+    margin:0 10px 10px 10px;
+    border-top:8px solid var(--shade-1);
+    background: var(--gray-2);
+}
+#image-list img { width:220px; height:220px; }
+#image-list .info { padding:10px; }
+#image-list .info a {
+    text-decoration: none;
+    color: var(--shade-1);
+}
+#image-list .info a:hover{
+    color: var(--shade-5);
+}
+
+
 .user {
     display: inline-block; /* Display liked users in a row */
     margin-right: 10px; /* Add space between user elements */
@@ -629,5 +652,7 @@ ul.messages li a.close {
     border-radius: 50%; /* Make user photo circular */
     margin-right: 5px; /* Add space between photo and text */
 }
+
+
 
 
