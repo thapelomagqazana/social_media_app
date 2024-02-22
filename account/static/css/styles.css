@@ -239,7 +239,8 @@ p {
 
 .cta-btn,
 .container-2 .link,
-a.like{
+a.like,
+.follow{
     background-color: var(--main-color);
     color: var(--gray-1);
     transition: background-color 0.3s ease;
@@ -254,7 +255,8 @@ a.like{
 }
 
 .container-2 .link,
-a.like {
+a.like,
+.follow {
     text-decoration: none;
     padding: 10px;
     font-weight: 600;
@@ -277,7 +279,8 @@ a.like {
 .get-started-btn:hover,
 #header .user a:hover,
 .container-2 .link:hover,
-a.like:hover {
+a.like:hover,
+.follow:hover {
     background-color: var(--shade-5);
     color: var(--gray-1);
     border: none
@@ -550,7 +553,7 @@ ul.messages li a.close {
 
 .title hr {
     width: 100%;
-    border: 1px solid var(--gray-4);
+    border: 1px solid var(--gray-3);
     margin: 0 auto 20px; /* Add space below the line */
 }
 
@@ -632,11 +635,13 @@ ul.messages li a.close {
 }
 #image-list img { width:220px; height:220px; }
 #image-list .info { padding:10px; }
-#image-list .info a {
+#image-list .info a,
+#people-list .title {
     text-decoration: none;
     color: var(--shade-1);
 }
-#image-list .info a:hover{
+#image-list .info a:hover,
+#people-list .title:hover{
     color: var(--shade-5);
 }
 
@@ -651,6 +656,49 @@ ul.messages li a.close {
     height: 30px;
     border-radius: 50%; /* Make user photo circular */
     margin-right: 5px; /* Add space between photo and text */
+}
+
+/* users */
+#people-list {
+    padding: 20px;
+}
+#people-list img {
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    margin-bottom:20px;
+}
+#people-list .user {
+    width:180px;
+    overflow:auto;
+    padding:10px;
+}
+#people-list .info { text-align:center; }
+img.user-detail {
+    border-radius:50%;
+}
+
+.profile-info {
+    float:left;
+    overflow:auto;
+    margin-right:20px;
+}
+.image-container { 
+    margin-top:40px; 
+}
+
+/* actions */
+.action {
+    clear:both;
+    overflow:auto;
+}
+.action .images {
+    float:left;
+    margin:0 10px 10px 0;
+}
+.action .date {
+    font-style:italic;
+    color:#ccc;
 }
 
 
