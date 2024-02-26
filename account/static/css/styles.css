@@ -239,6 +239,7 @@ p {
 
 .cta-btn,
 .container-2 .link,
+.container-3 .link,
 a.like,
 .follow{
     background-color: var(--main-color);
@@ -255,6 +256,7 @@ a.like,
 }
 
 .container-2 .link,
+.container-3 .link,
 a.like,
 .follow {
     text-decoration: none;
@@ -280,7 +282,8 @@ a.like,
 #header .user a:hover,
 .container-2 .link:hover,
 a.like:hover,
-.follow:hover {
+.follow:hover,
+.container-3 .link:hover {
     background-color: var(--shade-5);
     color: var(--gray-1);
     border: none
@@ -701,6 +704,81 @@ img.user-detail {
 .action .date {
     font-style:italic;
     color:#ccc;
+}
+
+.image-container-1 {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.image-container-1 img {
+    max-width: 300px;
+    max-height: 300px;
+    margin-bottom: 10px;
+}
+
+.image-container-1 p {
+    font-style: italic;
+}
+
+/* Add CSS styles here */
+.container-3 {
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.container-3 .content-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard-summary {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.bookmark-count {
+    font-weight: bold;
+}
+
+.bookmarklet-info {
+    margin-top: 10px;
+}
+
+.bookmarklet-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+.dashboard-actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.action-heading {
+    font-weight: bold;
+}
+
+#action-list {
+    margin-top: 10px;
+}
+
+.no-action-message {
+    color: #999;
+}
+
+.dashboard-links {
+    text-align: center;
+}
+
+.profile-edit-link,
+.password-change-link {
+    margin-top: 10px;
 }
 
 

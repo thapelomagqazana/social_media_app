@@ -12,15 +12,18 @@ Django==4.1.13
 django-debug-toolbar==3.6.0
 django-extensions @ git+https://github.com/django-extensions/django-extensions.git@25a41d8a3ecb24c009c5f4cac6010a091a3c91c8
 easy-thumbnails==2.8.1
+gunicorn==21.2.0
 idna==3.6
 lxml==5.1.0
 MarkupSafe==2.1.5
 oauthlib==3.2.2
 packaging==23.2
 Pillow==9.2.0
+psycopg2-binary==2.9.3
 pycparser==2.21
 PyJWT==2.8.0
 pyOpenSSL==24.0.0
+python-dotenv==1.0.1
 python3-openid==3.2.0
 redis==4.3.4
 reportlab==4.1.0
@@ -34,4 +37,5 @@ tinycss2==1.2.1
 urllib3==1.26.18
 webencodings==0.5.1
 Werkzeug==2.2.2
+whitenoise==6.6.0
 wrapt==1.16.0

@@ -3,25 +3,40 @@
 {% block title %}Dashboard{% endblock %}
 
 {% block content %}
-    <div class="container-2">
+    <div class="container-3">
         <div class="title">
             <h1>Dashboard</h1>
             <hr> <!-- Horizontal line -->
         </div>
         <div class="content-1">
-            {% with total_images_created=request.user.images_created.count %}
-                <p>Welcome to your dashboard. You have bookmarked {{ total_images_created }} image{{ total_images_created|pluralize }}.</p>
-            {% endwith %}
-            <p>Drag the following button to your bookmarks toolbar to bookmark images from other websites → <a href="javascript:{% include "bookmarklet_launcher.js" %}" class="link">Bookmark it</a></p>
-            <p>
-                Welcome to your dashboard. You can <a href="{% url 'edit' %}" class="link">edit your profile</a> or <a href="{% url 'password_change' %}" class="link">change your password</a>
-            </p>
+            <div class="dashboard-summary">
+                {% with total_images_created=request.user.images_created.count %}
+                    <p>Welcome! You have bookmarked <span class="bookmark-count">{{ total_images_created }}</span> image{{ total_images_created|pluralize }}.</p>
+                {% endwith %}
+                <p class="bookmarklet-info">
+                    <p>Drag the following button to your bookmarks toolbar to bookmark images from other websites → <a href="javascript:{% include "bookmarklet_launcher.js" %}" class="link">Bookmark it</a></p>
+                </p>
+            </div>
+            <div class="dashboard-actions">
+                <p class="action-heading">What's happening:</p>
+                {% if actions %}
+                    <div id="action-list">
+                        {% for action in actions %}
+                            {% include "actions/action/detail.html" %}
+                        {% endfor %}
+                    </div>
+                {% else %}
+                    <p class="no-action-message">No recent activities.</p>
+                {% endif %}
+            </div>
         </div>
-        <h2>What's happening</h2>
-        <div id="action-list">
-            {% for action in actions %}
-                {% include "actions/action/detail.html" %}
-            {% endfor %}
+        <div class="dashboard-links">
+            <p class="profile-edit-link">
+                <a href="{% url 'edit' %}" class="link">Edit your profile</a>
+            </p>
+            <p class="password-change-link">
+                <a href="{% url 'password_change' %}" class="link">Change your password</a>
+            </p>
         </div>
     </div>
 {% endblock %}

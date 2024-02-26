@@ -16,7 +16,7 @@
     <div id="header">
         <a href="{% url 'landing_page' %}">
             <span class="logo">
-                Dialogga
+                Image-Link
             </span>
         </a>
         
@@ -53,15 +53,18 @@
             {% endfor %}
         </ul>
     {% endif %}
-    <div id="content">
-        {% block content %}
-        {% endblock %}
+    <div class="wrapper">
+        <div id="content">
+            {% block content %}
+            {% endblock %}
+        </div>
     </div>
+    
     <footer>
         <div class="container">
             <div class="row">
                 <div class="col-6">
-                    <p>&copy; 2024 Dialogga. All rights reserved.</p>
+                    <p>&copy; 2024 Image-Link. All rights reserved.</p>
                 </div>
                 <div class="col-6 social-icons">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>

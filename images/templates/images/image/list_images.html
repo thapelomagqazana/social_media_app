@@ -1,4 +1,7 @@
 {% load thumbnail %}
+{% load static %}
+
+{% if images %}
     {% for image in images %}
         <div class="image">
             <a href="{{ image.get_absolute_url }}">
@@ -16,4 +19,10 @@
 
         </div>
     {% endfor %}
+{% else %}
+    <div class="image-container-1">
+        <img class="fallback-image" src="{% static 'img/Search-rafiki.png' %}" alt="Fallback Image">
+        <p class="fallback-message">No images available yet.</p>
+    </div>
+{% endif %}
 
