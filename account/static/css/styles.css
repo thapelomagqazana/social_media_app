@@ -636,12 +636,14 @@ ul.messages li a.close {
 #image-list img { width:220px; height:220px; }
 #image-list .info { padding:10px; }
 #image-list .info a,
-#people-list .title {
+#people-list .title,
+.info a {
     text-decoration: none;
     color: var(--shade-1);
 }
 #image-list .info a:hover,
-#people-list .title:hover{
+#people-list .title:hover,
+.info a:hover{
     color: var(--shade-5);
 }
 

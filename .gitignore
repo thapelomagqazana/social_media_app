@@ -15,6 +15,7 @@ __pycache__
 
 account/migrations/
 images/migrations/
+actions/migrations/
 
 
 # Ignore local settings file

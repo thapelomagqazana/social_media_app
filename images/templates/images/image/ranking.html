@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Images ranking{% endblock %}
+
+{% block content %}
+    <div class="title">
+        <h1>Images ranking</h1>
+        <hr>
+    </div>
+    <div class="container-2">
+        <ol>
+            {% for image in most_viewed %}
+                <li>
+                    <a href="{{ image.get_absolute_url }}">
+                        {{ image.title }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ol>
+    </div> 
+{% endblock %}
