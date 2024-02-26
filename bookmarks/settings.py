@@ -193,6 +193,8 @@ ABSOLUTE_URL_OVERRIDES = {
                                         args=[u.username])
 }
 
+CSRF_TRUSTED_ORIGINS = ['https://web-production-a127.up.railway.app']
+
 if DEBUG:
     import mimetypes
     mimetypes.add_type('application/javascript', '.js', True)
