@@ -18,6 +18,7 @@ images/migrations/
 actions/migrations/
 media/
 staticfiles/
+app/
 
 
 # Ignore local settings file
