@@ -13,10 +13,14 @@ import redis
 from django.conf import settings
 
 
-# conneect to redis
-r = redis.Redis(host=settings.REDIS_HOST,
-                port=settings.REDIS_PORT,
-                db=settings.REDIS_DB)
+# # connect to redis
+# r = redis.Redis(host=settings.REDIS_HOST,
+#                 port=settings.REDIS_PORT,
+#                 db=settings.REDIS_DB)
+
+# Connect to Redis using Redis URL
+redis_url = settings.REDIS_URL
+r = redis.from_url(redis_url)
 
 @login_required
 def image_create(request):
