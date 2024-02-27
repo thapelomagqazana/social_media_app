@@ -32,7 +32,6 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get("DEBUG")
 
-#
 
 ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1', 'web-production-a127.up.railway.app']
 
@@ -155,7 +154,7 @@ LOGIN_REDIRECT_URL = "dashboard"
 LOGIN_URL = "login"
 LOGOUT_URL = "logout"
 
-MEDIA_URL = "media/"
+MEDIA_URL = "app/media/"
 
 MEDIA_ROOT = BASE_DIR / "media"
 
