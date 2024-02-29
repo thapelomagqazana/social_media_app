@@ -693,33 +693,43 @@ img.user-detail {
 }
 
 /* actions */
-.action {
-    clear:both;
-    overflow:auto;
-}
-.action .images {
-    float:left;
-    margin:0 10px 10px 0;
-}
-.action .date {
-    font-style:italic;
-    color:#ccc;
-}
+  .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-.image-container-1 {
-    text-align: center;
-    margin-top: 20px;
-}
+  /* Adjust styles for images container */
+  .images {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
 
-.image-container-1 img {
-    max-width: 300px;
-    max-height: 300px;
-    margin-bottom: 10px;
-}
+  /* Adjust styles for item images */
+  .item-img {
+    width: 80px; /* Set fixed width for item images */
+    height: 80px; /* Set fixed height for item images */
+    border-radius: 50%; /* Make item images circular */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
 
-.image-container-1 p {
-    font-style: italic;
-}
+  /* Adjust styles for info container */
+  .info {
+    text-align: center; /* Center align info */
+  }
+
+  /* Adjust styles for date */
+  .date {
+    font-style: italic; /* Add italic style to date */
+    color: #ccc; /* Change color of date */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for user link */
+  .info a {
+    color: var(--shade-1); /* Change color of user link */
+    text-decoration: none; /* Remove underline from user link */
+    font-weight: bold; /* Add bold font weight to user link */
+  }
 
 /* Add CSS styles here */
 .container-3 {
@@ -798,10 +808,32 @@ img.user-detail {
     .user {
       padding-top: 0; /* Remove top padding for user section in header */
     }
-  
-    .wrapper {
-      padding: 0 10px; /* Adjust wrapper padding for smaller screens */
-    }
+
+    .container {
+        width: 90%; /* Adjust container width */
+      }
+    
+      .row {
+        display: flex;
+        flex-direction: column; /* Arrange columns vertically */
+      }
+    
+      .col-6 {
+        width: 100%; /* Make columns full width on smaller screens */
+        margin-bottom: 20px; /* Add margin between columns */
+      }
+    
+      .illustration img {
+        max-width: 100%; /* Ensure illustration image fits within its container */
+      }
+    
+      .content {
+        text-align: center; /* Center content in the column */
+      }
+    
+      .prefooter {
+        display: none; /* Hide prefooter section on smaller screens */
+      }
     
     .greetings{
         font-size: xx-large;
@@ -812,42 +844,7 @@ img.user-detail {
         font-weight: bold;
         font-size: x-large;
     }
-
-    .col-6.illustration {
-        display: none; /* Hide the column with illustration on screens less than 360px */
-    }
   
-    .illustration img {
-      max-width: 100%; /* Ensure illustration image fits within column width */
-    }
-  
-    .content {
-      padding: 20px 0; /* Adjust content padding for smaller screens */
-    }
-  
-    .cta-buttons {
-      flex-direction: column; /* Change button layout to column for smaller screens */
-      align-items: center; /* Center buttons vertically */
-    }
-  
-    .cta-btn,
-    .get-started-btn {
-      width: 100%; /* Set button width to 100% for smaller screens */
-      margin-bottom: 10px; /* Add bottom margin between buttons */
-    }
-  
-    footer .col-6 {
-      text-align: center; /* Center text in footer for smaller screens */
-      margin-bottom: 20px; /* Add bottom margin to footer columns */
-    }
-  
-    footer .social-icons {
-      margin-left: 0; /* Reset margin for social icons in footer */
-    }
-  
-    footer .social-icons a {
-      margin-right: 10px; /* Decrease margin between social icons */
-    }
 
     /* Adjust styles for container-3 */
   .container-3 .content-1 {
@@ -987,11 +984,13 @@ img.user-detail {
     align-items: center;
   }
   
-  .likes .count {
+  .likes .count,
+  .count {
     margin-bottom: 5px; /* Adjust spacing between count elements */
   }
   
-  .likes .like.button {
+  .likes .like.button,
+  .follow button {
     margin-top: 10px; /* Adjust spacing between count and like button */
   }
 
@@ -1044,6 +1043,477 @@ img.user-detail {
   .info {
     text-align: center; /* Align title text to center */
   }
+
+  .user {
+    margin-bottom: 20px; /* Add space between users */
+}
+
+.user img {
+    width: 150px; /* Decrease image width for smaller screens */
+    height: 150px; /* Decrease image height for smaller screens */
+}
+}
+
+@media screen and (min-width: 360px) and (max-width: 480px) {
+    .container {
+        width: 90%; /* Adjust container width */
+      }
+    
+      .row {
+        display: flex;
+        flex-direction: column; /* Arrange columns vertically */
+      }
+    
+      .col-6 {
+        width: 100%; /* Make columns full width on smaller screens */
+        margin-bottom: 20px; /* Add margin between columns */
+      }
+    
+      .illustration img {
+        max-width: 100%; /* Ensure illustration image fits within its container */
+      }
+    
+      .content {
+        text-align: center; /* Center content in the column */
+      }
+    
+      .prefooter {
+        display: none; /* Hide prefooter section on smaller screens */
+      }
+
+      .container-3 {
+        width: 90%; /* Adjust container width */
+        margin: 0 auto; /* Center container */
+      }
+    
+      .title {
+        text-align: center; /* Center title */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+        font-size: 1.5em; /* Increase font size for title */
+      }
+    
+      /* Adjust styles for horizontal line */
+      hr {
+        margin-top: 10px; /* Add margin top for spacing */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      .content-1 {
+        display: flex;
+        flex-direction: column; /* Arrange content in a column */
+        align-items: center; /* Center content horizontally */
+      }
+    
+      .dashboard-summary {
+        text-align: center; /* Center summary text */
+      }
+    
+      .dashboard-actions {
+        margin-top: 20px; /* Add space between summary and actions */
+        text-align: center; /* Center actions */
+      }
+    
+      .dashboard-links {
+        margin-top: 20px; /* Add space between actions and links */
+        text-align: center; /* Center links */
+      }
+    
+    .link,
+    .bookmarklet-info a {
+        display: block; /* Make links block-level elements */
+        margin-bottom: 10px; /* Add space between links */
+        padding: 10px 0; /* Increase vertical padding of links */
+        text-align: center;
+    }
+
+        /* Adjust styles for action container */
+  .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust styles for images container */
+  .images {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for item images */
+  .item-img {
+    width: 80px; /* Set fixed width for item images */
+    height: 80px; /* Set fixed height for item images */
+    border-radius: 50%; /* Make item images circular */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for info container */
+  .info {
+    text-align: center; /* Center align info */
+  }
+
+  /* Adjust styles for date */
+  .date {
+    font-style: italic; /* Add italic style to date */
+    color: #ccc; /* Change color of date */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for user link */
+  .info a {
+    color: var(--shade-1); /* Change color of user link */
+    text-decoration: none; /* Remove underline from user link */
+    font-weight: bold; /* Add bold font weight to user link */
+  }
+
+   /* Adjust styles for card-body */
+   .card-body {
+    padding: 10px; /* Add padding for card-body */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  /* Adjust styles for image preview */
+  .image-preview {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for bookmark form */
+  .bookmark-form {
+    text-align: center; /* Center align form */
+  }
+
+  /* Adjust styles for form input */
+  .bookmark-form input[type="submit"] {
+    width: 100%; /* Set width to 100% for input submit */
+    padding: 10px; /* Add padding for input submit */
+    margin-top: 10px; /* Add margin top for spacing */
+  }
+
+      /* Adjust styles for image-detail-container */
+      .image-detail-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items horizontally */
+      }
+    
+      /* Adjust styles for image */
+      .image {
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for image-detail */
+      .image-detail {
+        max-width: 100%; /* Ensure image fits within container */
+        height: auto; /* Maintain aspect ratio */
+      }
+    
+      /* Adjust styles for likes */
+      .likes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .likes .count,
+      .count{
+        margin-bottom: 5px; /* Adjust spacing between count elements */
+      }
+      
+      .likes .like.button,
+      .follow button {
+        margin-top: 10px; /* Adjust spacing between count and like button */
+      }
+    
+      /* Adjust styles for description */
+      .description {
+        text-align: center; /* Center align description */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for liked-users */
+      .liked-users {
+        text-align: center; /* Center align liked users */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for user */
+      .user {
+        margin-bottom: 5px; /* Add margin bottom for spacing */
+        text-align: center; /* Center user content */
+      }
+    
+      /* Adjust styles for user-photo */
+      .user-photo {
+        width: 50px; /* Set width for user photo */
+        height: 50px; /* Set height for user photo */
+        border-radius: 50%; /* Make user photo round */
+        margin-right: 5px; /* Add margin right for spacing */
+      }
+
+      .container-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center-align the content */
+        gap: 20px; /* Add space between users */
+      }
+      
+      #image-list {
+        width: 100%; /* Ensure the image list takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers content horizontally */
+      }
+      
+      .image {
+        margin-bottom: 20px; /* Adjust spacing between image elements */
+      }
+      
+      .image img {
+        max-width: 100%; /* Ensure images don't exceed container width */
+      }
+      
+      .info {
+        text-align: center; /* Align title text to center */
+        margin-top: 10px; /* Add space between image and user information */
+      }
+    
+    .user img {
+        width: 180px; /* Set the width of the user image */
+        height: 180px; /* Set the height of the user image */
+        border-radius: 50%; /* Make the image round */
+        object-fit: cover; /* Cover the image within its container */
+    }
+    
+    .info .title {
+        font-weight: bold; /* Make user name bold */
+    }
+}
+
+/* Media query for screen widths between 480px and 768px */
+@media screen and (min-width: 480px) and (max-width: 768px) {
+    .container {
+        max-width: 90%; /* Adjust container width */
+    }
+
+    .col-6 {
+        width: 100%; /* Make columns full width */
+        margin-bottom: 20px; /* Add space between columns */
+    }
+
+    .illustration {
+        text-align: center; /* Center illustration */
+    }
+
+    .content {
+        text-align: center; /* Center content */
+    }
+
+    .cta-buttons {
+        margin-top: 20px; /* Add space above buttons */
+    }
+
+    .prefooter {
+        display: none; /* Hide prefooter section */
+    }
+
+    .container-3 {
+        width: 90%; /* Adjust container width */
+        margin: 0 auto; /* Center container */
+      }
+    
+      .title {
+        text-align: center; /* Center title */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+        font-size: 1.5em; /* Increase font size for title */
+      }
+    
+      /* Adjust styles for horizontal line */
+      hr {
+        margin-top: 10px; /* Add margin top for spacing */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      .content-1 {
+        display: flex;
+        flex-direction: column; /* Arrange content in a column */
+        align-items: center; /* Center content horizontally */
+      }
+    
+      .dashboard-summary {
+        text-align: center; /* Center summary text */
+      }
+    
+      .dashboard-actions,
+      .dashboard-links {
+        margin-top: 20px; /* Add space between summary and actions */
+        text-align: center; /* Center actions */
+      }
+    
+    
+
+        /* Adjust styles for action container */
+  .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust styles for images container */
+  .images {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for item images */
+  .item-img {
+    width: 80px; /* Set fixed width for item images */
+    height: 80px; /* Set fixed height for item images */
+    border-radius: 50%; /* Make item images circular */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for info container */
+  .info {
+    text-align: center; /* Center align info */
+  }
+
+  /* Adjust styles for date */
+  .date {
+    font-style: italic; /* Add italic style to date */
+    color: #ccc; /* Change color of date */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for user link */
+  .info a {
+    color: var(--shade-1); /* Change color of user link */
+    text-decoration: none; /* Remove underline from user link */
+    font-weight: bold; /* Add bold font weight to user link */
+  }
+
+  /* Adjust styles for card-body */
+  .card-body {
+    padding: 10px; /* Add padding for card-body */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  /* Adjust styles for image preview */
+  .image-preview {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for bookmark form */
+  .bookmark-form {
+    text-align: center; /* Center align form */
+  }
+
+  /* Adjust styles for form input */
+  .bookmark-form input[type="submit"] {
+    width: 100%; /* Set width to 100% for input submit */
+    padding: 10px; /* Add padding for input submit */
+    margin-top: 10px; /* Add margin top for spacing */
+  }
+
+      /* Adjust styles for image-detail-container */
+      .image-detail-container {
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items horizontally */
+      }
+    
+      /* Adjust styles for image */
+      .image {
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for image-detail */
+      .image-detail {
+        max-width: 100%; /* Ensure image fits within container */
+        height: auto; /* Maintain aspect ratio */
+      }
+    
+      /* Adjust styles for likes */
+      .likes {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .likes .count,
+      .count{
+        margin-bottom: 5px; /* Adjust spacing between count elements */
+      }
+      
+      .likes .like.button,
+      .follow button {
+        margin-top: 10px; /* Adjust spacing between count and like button */
+      }
+    
+      /* Adjust styles for description */
+      .description {
+        text-align: center; /* Center align description */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for liked-users */
+      .liked-users {
+        text-align: center; /* Center align liked users */
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for user */
+      .user {
+        margin-bottom: 5px; /* Add margin bottom for spacing */
+        text-align: center; /* Center user content */
+      }
+    
+      /* Adjust styles for user-photo */
+      .user-photo {
+        width: 50px; /* Set width for user photo */
+        height: 50px; /* Set height for user photo */
+        border-radius: 50%; /* Make user photo round */
+        margin-right: 5px; /* Add margin right for spacing */
+      }
+
+      .container-2 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center-align the content */
+        gap: 20px; /* Add space between users */
+      }
+      
+      #image-list {
+        width: 100%; /* Ensure the image list takes full width */
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Centers content horizontally */
+      }
+      
+      .image {
+        margin-bottom: 20px; /* Adjust spacing between image elements */
+      }
+      
+      .image img {
+        max-width: 100%; /* Ensure images don't exceed container width */
+      }
+      
+      .info {
+        text-align: center; /* Align title text to center */
+        margin-top: 10px; /* Add space between image and user information */
+      }
+    
+    .user img {
+        width: 180px; /* Set the width of the user image */
+        height: 180px; /* Set the height of the user image */
+        border-radius: 50%; /* Make the image round */
+        object-fit: cover; /* Cover the image within its container */
+    }
+    
+    .info .title {
+        font-weight: bold; /* Make user name bold */
+    }
 }
   
 
