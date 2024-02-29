@@ -782,5 +782,270 @@ img.user-detail {
 }
 
 
+@media screen and (max-width: 360px) {
+    #header {
+      padding: 10px 20px; /* Decrease header padding for smaller screens */
+    }
+  
+    #header .logo {
+      font-size: 18px; /* Decrease logo font size for smaller screens */
+    }
+  
+    #header ul.menu li {
+      padding: 4px 5px; /* Decrease menu item padding for smaller screens */
+    }
+  
+    .user {
+      padding-top: 0; /* Remove top padding for user section in header */
+    }
+  
+    .wrapper {
+      padding: 0 10px; /* Adjust wrapper padding for smaller screens */
+    }
+    
+    .greetings{
+        font-size: xx-large;
+        font-weight: bold;
+    }
+
+    .x-large {
+        font-weight: bold;
+        font-size: x-large;
+    }
+
+    .col-6.illustration {
+        display: none; /* Hide the column with illustration on screens less than 360px */
+    }
+  
+    .illustration img {
+      max-width: 100%; /* Ensure illustration image fits within column width */
+    }
+  
+    .content {
+      padding: 20px 0; /* Adjust content padding for smaller screens */
+    }
+  
+    .cta-buttons {
+      flex-direction: column; /* Change button layout to column for smaller screens */
+      align-items: center; /* Center buttons vertically */
+    }
+  
+    .cta-btn,
+    .get-started-btn {
+      width: 100%; /* Set button width to 100% for smaller screens */
+      margin-bottom: 10px; /* Add bottom margin between buttons */
+    }
+  
+    footer .col-6 {
+      text-align: center; /* Center text in footer for smaller screens */
+      margin-bottom: 20px; /* Add bottom margin to footer columns */
+    }
+  
+    footer .social-icons {
+      margin-left: 0; /* Reset margin for social icons in footer */
+    }
+  
+    footer .social-icons a {
+      margin-right: 10px; /* Decrease margin between social icons */
+    }
+
+    /* Adjust styles for container-3 */
+  .container-3 .content-1 {
+    padding: 10px; /* Adjust content padding for smaller screens */
+  }
+
+  .dashboard-summary {
+    margin-bottom: 10px; /* Decrease margin bottom for summary section */
+  }
+
+  .bookmarklet-info {
+    margin-top: 5px; /* Decrease margin top for bookmarklet info */
+  }
+
+  .dashboard-actions,
+  .dashboard-links {
+    margin-top: 20px; /* Add top margin for actions and links sections */
+  }
+
+  .action-heading {
+    margin-bottom: 10px; /* Decrease margin bottom for action heading */
+  }
+
+  .dashboard-links p {
+    margin-bottom: 5px; /* Decrease margin bottom for links */
+  }
+
+  .link,
+  .bookmarklet-info a {
+    display: block; /* Make links block-level elements */
+    margin-bottom: 10px; /* Add space between links */
+    padding: 10px 0; /* Increase vertical padding of links */
+    text-align: center;
+  }
+
+
+
+    /* Adjust styles for action container */
+  .action {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Adjust styles for images container */
+  .images {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for item images */
+  .item-img {
+    width: 80px; /* Set fixed width for item images */
+    height: 80px; /* Set fixed height for item images */
+    border-radius: 50%; /* Make item images circular */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for info container */
+  .info {
+    text-align: center; /* Center align info */
+  }
+
+  /* Adjust styles for date */
+  .date {
+    font-style: italic; /* Add italic style to date */
+    color: #ccc; /* Change color of date */
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for user link */
+  .info a {
+    color: var(--shade-1); /* Change color of user link */
+    text-decoration: none; /* Remove underline from user link */
+    font-weight: bold; /* Add bold font weight to user link */
+  }
+
+   /* Adjust styles for title */
+   .title {
+    text-align: center; /* Center align title */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+    font-size: 1.5em; /* Increase font size for title */
+  }
+
+  /* Adjust styles for horizontal line */
+  hr {
+    margin-top: 10px; /* Add margin top for spacing */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+    /* Adjust styles for card-body */
+    .card-body {
+        padding: 10px; /* Add padding for card-body */
+        display: flex; /* Use flexbox for layout */
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align items horizontally */
+      }
+    
+      /* Adjust styles for image preview */
+      .image-preview {
+        margin-bottom: 10px; /* Add margin bottom for spacing */
+      }
+    
+      /* Adjust styles for bookmark form */
+      .bookmark-form {
+        text-align: center; /* Center align form */
+      }
+    
+      /* Adjust styles for form input */
+      .bookmark-form input[type="submit"] {
+        width: 100%; /* Set width to 100% for input submit */
+        padding: 10px; /* Add padding for input submit */
+        margin-top: 10px; /* Add margin top for spacing */
+      }
+
+      /* Adjust styles for image-detail-container */
+  .image-detail-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items horizontally */
+  }
+
+  /* Adjust styles for image */
+  .image {
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for image-detail */
+  .image-detail {
+    max-width: 100%; /* Ensure image fits within container */
+    height: auto; /* Maintain aspect ratio */
+  }
+
+  /* Adjust styles for likes */
+  .likes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .likes .count {
+    margin-bottom: 5px; /* Adjust spacing between count elements */
+  }
+  
+  .likes .like.button {
+    margin-top: 10px; /* Adjust spacing between count and like button */
+  }
+
+  /* Adjust styles for description */
+  .description {
+    text-align: center; /* Center align description */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for liked-users */
+  .liked-users {
+    text-align: center; /* Center align liked users */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for user */
+  .user {
+    margin-bottom: 5px; /* Add margin bottom for spacing */
+  }
+
+  /* Adjust styles for user-photo */
+  .user-photo {
+    width: 50px; /* Set width for user photo */
+    height: 50px; /* Set height for user photo */
+    border-radius: 50%; /* Make user photo round */
+    margin-right: 5px; /* Add margin right for spacing */
+  }
+
+  .container-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align the content */
+  }
+  
+  #image-list {
+    width: 100%; /* Ensure the image list takes full width */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content horizontally */
+  }
+  
+  .image {
+    margin-bottom: 20px; /* Adjust spacing between image elements */
+  }
+  
+  .image img {
+    max-width: 100%; /* Ensure images don't exceed container width */
+  }
+  
+  .info {
+    text-align: center; /* Align title text to center */
+  }
+}
+  
+
 
 

@@ -30,8 +30,8 @@ load_dotenv(os.path.join(BASE_DIR, ".env"))
 SECRET_KEY = os.environ.get("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG")
-# DEBUG = False
+# DEBUG = os.environ.get("DEBUG")
+DEBUG = False
 
 
 ALLOWED_HOSTS = ['mysite.com', 'localhost', '127.0.0.1', 'web-production-a127.up.railway.app']
@@ -160,7 +160,8 @@ LOGOUT_URL = "logout"
 
 MEDIA_URL = "media/"
 
-MEDIA_ROOT = os.environ.get('VOLUME_MOUNT_PATH', '/app/media')
+# MEDIA_ROOT = os.environ.get('VOLUME_MOUNT_PATH', '/app/media')
+MEDIA_ROOT = BASE_DIR / "media"
 
 
 AUTHENTICATION_BACKENDS = [
